@@ -36,3 +36,4 @@ var sortedShit = numbers.sort(function(first,second){return second - first})
 				.reduce(function(accumulation, currentValue) {return accumulation + currentValue;});
 
 console.log(sortedShit);
+
