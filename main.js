@@ -58,9 +58,48 @@ console.log(fruits.map(splitter));
 
 
 // 3A: Write a function called fiveLettersOnlyOld that only returns fruits that have 5 letters.
+
+function fiveLettersOnlyOld(array) {
+	var fiveArray = [];
+	for (var i = 0; i < array.length; i++) {
+		 if (array[i].length === 5) {
+		 	fiveArray.push(array[i]);
+		 }
+	}
+	return fiveArray;
+}
+
+console.log(fiveLettersOnlyOld(fruits));
+
 // 3B: Rewrite using filter array method
+
+var filterMe = fruits.filter(function(fruit) {
+	if (fruit.length === 5) {
+		return true;
+	}
+});
+
+console.log(filterMe);
+
 
 var numbers = [0, 1, 2, 3, 4];
 
 // 4A: Write a function called addzOld that returns the sum of an array.
+
+function addzOld(array) {
+	var sum = 0;
+	for (var i = 0; i < array.length; i++) {
+		 sum += array[i]
+	}
+	return sum;
+}
+
+console.log(addzOld(numbers));
+
 // 4B: Rewrite using reduce array method
+
+var datvalue = numbers.reduce(function(accumulation, currentValue) {
+	return accumulation + currentValue;
+});
+
+console.log(datvalue);
